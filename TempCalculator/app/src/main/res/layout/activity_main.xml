@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+
+    <EditText
+        android:id="@+id/et_temp"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/enter_temperature"
+        android:inputType="numberDecimal"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="@string/select_the_temperature_scale"
+        android:textSize="20sp"/>
+
+    <RadioGroup
+        android:id="@+id/rgTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        tools:layout_editor_absoluteX="150dp"
+        tools:layout_editor_absoluteY="103dp">
+
+        <RadioButton
+            android:id="@+id/radioBtnCel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/celsius" />
+
+        <RadioButton
+            android:id="@+id/radioBtnFah"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fahrenheit" />
+    </RadioGroup>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="417dp"
+        android:layout_height="89dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="239dp">
+
+        <Button
+            android:id="@+id/btn_Calculate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="52dp"
+            android:text="@string/calculate"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.487"/>
+
+        <TextView
+            android:id="@+id/tv_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_Calculate"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TextViewEdits" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/temperature"
+        tools:ignore="ImageContrastCheck" />
+</LinearLayout>

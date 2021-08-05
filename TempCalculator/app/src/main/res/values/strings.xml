@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">TempCalculator</string>
+    <string name="temperature">Temperature</string>
+    <string name="celsius">Celsius</string>
+    <string name="fahrenheit">Fahrenheit</string>
+    <string name="enter_temperature">Enter Temperature</string>
+    <string name="calculate">Calculate</string>
+    <string name="select_the_temperature_scale">Select the temperature Scale</string>
+</resources>
